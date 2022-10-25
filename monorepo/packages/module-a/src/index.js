@@ -1,9 +1,11 @@
-// async function load() {
-//     await new Promise(rs => setTimeout(rs, 1000));
-//     console.log("async load console....")
-//     return 'load async';
-// }
+import { loadFunc } from "./async"
 
-// load();
+export default function load() {
+  new Promise(rs => setTimeout(rs, 1000));
+  console.log("async load console....")
+  return 'load async';
+}
 
-import "../../../common/index"
+loadFunc();
+
+export * from "../../../common/index"

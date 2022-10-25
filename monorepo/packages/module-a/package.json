@@ -8,8 +8,5 @@
     "build": "webpack"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "core-js": "^3.25.5"
-  }
+  "license": "ISC"
 }

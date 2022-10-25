@@ -1,1 +1,1 @@
- new Promise();
+export default new Promise(resolve => resolve);

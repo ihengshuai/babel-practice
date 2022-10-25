@@ -6,21 +6,21 @@ importers:
     specifiers:
       '@babel/cli': ^7.19.3
       '@babel/core': ^7.19.3
+      '@babel/plugin-syntax-dynamic-import': ^7.8.3
       '@babel/plugin-transform-runtime': ^7.19.1
       '@babel/preset-env': ^7.19.4
       '@babel/runtime': ^7.19.4
       '@babel/runtime-corejs3': ^7.19.6
       babel-loader: ^8.2.5
       core-js: ^3.25.5
-      corejs: ^1.0.0
       webpack: ^5.74.0
       webpack-cli: ^4.10.0
     dependencies:
       '@babel/runtime': 7.19.4
-      corejs: 1.0.0
     devDependencies:
       '@babel/cli': 7.19.3_@babel+core@7.19.3
       '@babel/core': 7.19.3
+      '@babel/plugin-syntax-dynamic-import': 7.8.3_@babel+core@7.19.3
       '@babel/plugin-transform-runtime': 7.19.1_@babel+core@7.19.3
       '@babel/preset-env': 7.19.4_@babel+core@7.19.3
       '@babel/runtime-corejs3': 7.19.6
@@ -29,11 +29,11 @@ importers:
       webpack: 5.74.0_webpack-cli@4.10.0
       webpack-cli: 4.10.0_webpack@5.74.0
 
+  common:
+    specifiers: {}
+
   packages/module-a:
-    specifiers:
-      core-js: ^3.25.5
-    devDependencies:
-      core-js: 3.25.5
+    specifiers: {}
 
 packages:
 
@@ -351,6 +351,8 @@ packages:
     resolution: {integrity: sha512-qpVT7gtuOLjWeDTKLkJ6sryqLliBaFpAtGeqw5cs5giLldvh+Ch0plqnUMKoVAUS6ZEueQQiZV+p5pxtPitEsA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.19.4
     dev: true
 
   /@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/7.18.6_@babel+core@7.19.3:
@@ -1708,10 +1710,6 @@ packages:
     resolution: {integrity: sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==}
     requiresBuild: true
     dev: true
-
-  /corejs/1.0.0:
-    resolution: {integrity: sha512-jUeyZwPm8qENqBFQi9tXr3FsUWBx+hi4HF5gZij5fynw9TtQOSEX0pip1kas5sBLValsRWAQssjiwEIAAkXWdQ==}
-    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
