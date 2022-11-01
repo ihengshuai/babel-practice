@@ -5,6 +5,7 @@ module.exports = (api) => {
   console.log(process.cwd())
 
   return {
+    "sourceMaps": true,
     "babelrcRoots": [".", "./packages/**"]
   }
 }
